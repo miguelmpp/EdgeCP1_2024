@@ -1,0 +1,374 @@
+[
+    {
+        "id": "a076cc8f63f7a656",
+        "type": "tab",
+        "label": "CP4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "01f2c022d0256942",
+        "type": "serial in",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "serial": "108fe3cf765b911b",
+        "x": 690,
+        "y": 280,
+        "wires": [
+            [
+                "f3ba3684dd705002"
+            ]
+        ]
+    },
+    {
+        "id": "f3ba3684dd705002",
+        "type": "json",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 890,
+        "y": 280,
+        "wires": [
+            [
+                "3d1e77ff36f10959",
+                "c1f3209af003d42f",
+                "04bd78483b64f9b1",
+                "b31f3328419f1218"
+            ]
+        ]
+    },
+    {
+        "id": "3d1e77ff36f10959",
+        "type": "change",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 200,
+        "wires": [
+            [
+                "b970ca1912da9005",
+                "9c838808e6bf49f0"
+            ]
+        ]
+    },
+    {
+        "id": "c1f3209af003d42f",
+        "type": "change",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.distance_cm",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 280,
+        "wires": [
+            [
+                "3a9ca36c744a9944",
+                "dda0876e09d79b64"
+            ]
+        ]
+    },
+    {
+        "id": "04bd78483b64f9b1",
+        "type": "change",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Luminosidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 360,
+        "wires": [
+            [
+                "8bf7d313d6336073",
+                "4fb4102085d528a6"
+            ]
+        ]
+    },
+    {
+        "id": "b970ca1912da9005",
+        "type": "debug",
+        "z": "a076cc8f63f7a656",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9c838808e6bf49f0",
+        "type": "ui_gauge",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "group": "5c555609db826e8c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1370,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3a9ca36c744a9944",
+        "type": "debug",
+        "z": "a076cc8f63f7a656",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "dda0876e09d79b64",
+        "type": "ui_gauge",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "group": "5c555609db826e8c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Distância",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1360,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8bf7d313d6336073",
+        "type": "debug",
+        "z": "a076cc8f63f7a656",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "4fb4102085d528a6",
+        "type": "ui_gauge",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "group": "5c555609db826e8c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Luz",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1350,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b31f3328419f1218",
+        "type": "change",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Umidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 440,
+        "wires": [
+            [
+                "1786696d0a140c94",
+                "ddd7b67e47e42a30"
+            ]
+        ]
+    },
+    {
+        "id": "1786696d0a140c94",
+        "type": "debug",
+        "z": "a076cc8f63f7a656",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ddd7b67e47e42a30",
+        "type": "ui_gauge",
+        "z": "a076cc8f63f7a656",
+        "name": "",
+        "group": "5c555609db826e8c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1360,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "108fe3cf765b911b",
+        "type": "serial-port",
+        "name": "Arduino",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "5c555609db826e8c",
+        "type": "ui_group",
+        "name": "1",
+        "tab": "9bd7787abfbfdc8a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9bd7787abfbfdc8a",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
